@@ -1,0 +1,1184 @@
+#tool{
+	section{
+		width: $lg;
+		margin: 10px auto;
+		text-align: center;
+		@media only screen and (max-width: $lg){
+			width: $md;
+		}
+		@media only screen and (max-width: $md){
+			max-width: 400px;
+			width: 100%;
+		}
+		&.question-one-container{}
+		&.question-two-container{
+			// display: block;
+			display: none;
+		}
+		&.results-panel{
+			// display: block;
+			display: none;
+			.description{
+				@media only screen and (max-width: $lg){
+					width: calc(50% - 20px);
+					.description-inner{
+						.contents{
+							h4{
+								font-size: 24px;
+							}
+							p{
+								font-size: 14px;
+							}
+						}
+					}
+				}
+				@media only screen and (max-width: $md){
+					max-width: 380px;
+					width: 100%;
+					.description-inner{
+						.contents{
+							h4{
+								font-size: 20px;
+							}
+							p{
+								font-size: 12px;
+							}
+						}
+					}
+				}
+				@media only screen and (max-width: $sm){
+					max-width: calc(100% - 20px);
+				}
+			}
+
+			.form-error-container {
+			    background-color: #f00;
+			    color: #fff;
+			    display: none; // shows on error ob v
+			    font-weight: 900;
+				margin: 8px 15px;
+			    padding: 10px 0;
+			    height: 45px;
+
+				@media only screen and (max-width: $lg){
+					margin: 8px;
+					padding: 10px 10px 10px 0;
+				}
+
+				@media only screen and (max-width: $md){
+					padding: 10px 10px 35px 0;
+				}
+			}
+
+
+		}
+		.one-col{
+			width: calc(33% - 20px);
+			@media only screen and (max-width: $lg){
+				width: calc(50% - 20px);
+			}
+			@media only screen and (max-width: $md){
+				width: calc(100% - 20px);
+			}
+		}
+		.two-col{
+			width: calc(66% - 20px); 
+			@media only screen and (max-width: $lg){
+				width: calc(100% - 20px);
+			}
+			@media only screen and (max-width: $md){
+				width: calc(100% - 20px);
+			}
+		}
+		.three-col{
+			width: calc(100% - 30px);
+			@media only screen and (max-width: $lg){
+				width: calc(100% - 20px);
+			}
+		}
+		.error{
+			display: none;
+			@include hel-bold(16px, 20px);
+			margin: 10px 20px;
+			@media only screen and (max-width: $md){
+				font-size: 14px;
+				line-height: 17px;
+			}
+			span{
+				display: block;
+				@media only screen and (max-width: $md){
+					margin: 10px 0 0 0;
+				}
+			}
+		}
+		.description{
+			display: table;
+			background-color: #4d4d4f;
+			.description-inner{
+				display: table-cell;
+				height: 380px;
+				vertical-align: middle;
+				.contents{
+					margin: 0 30px;
+					text-align: left;
+					p{
+						@include hel-roman(20px, 27px);
+						color: $white;
+						margin: 0;
+					}
+					&.q1{
+						h4{
+							@include hel-roman(24px);
+							color: $white;
+							margin: 0 0 8px;
+						}
+						h3{
+							@include hel-bold(44px, 48px);
+							color: $white;	
+							width: 450px;
+							margin: 0;
+							padding: 0;			
+						}
+						p{
+							margin-top: 20px;
+						}
+					}
+					&.q2{
+						h4{
+							@include hel-bold(29px, 30px);
+							color: $white;
+							margin: 0 0 20px;
+							@media only screen and (max-width: $lg){
+								font-size: 24px;
+							}
+						}
+						p{
+							@media only screen and (max-width: $lg){
+								font-size: 14px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.teal{
+			background-color: #00a1b0;
+		}
+		.orange{
+			background-color: #ff9016;
+		}
+		.green{
+			background-color: #9fd9b4;
+		}
+		.yellow{
+			background-color: #f4be49;
+		}
+		.tile{
+			height: 380px;
+			display: inline-block;
+			margin: 8px;
+			padding: 0;
+			position: relative;
+			@media only screen and (max-width: $md){
+				max-width: 380px;
+				margin: 5px 10px;
+			}
+			@media only screen and (max-width: $sm){
+				max-width: calc(100% - 20px);
+				height: 300px;
+			}
+		}
+		.description-one{
+			@media only screen and (max-width: $md){
+				height: auto;
+				.description-inner{
+					height: auto;
+					width: 100%;
+					.contents{
+						margin: 30px 20px 20px;
+						&.q1 {
+							h4{
+								font-size: 18px;
+								line-height: 22px;
+							}
+							h3{
+								width: auto;
+								font-size: 28px;
+								line-height: 33px;
+							}
+							p{
+								font-size: 16px;
+								line-height: 22px;
+							}
+						}
+					}	
+				}
+			}			
+		}
+		.description-results{
+			@media only screen and (max-width: $sm){
+				height: auto;
+				width: calc(100% - 20px);
+				padding: 25px 0 20px;
+			}
+			.description-inner{
+				height: 380px;
+				@media only screen and (max-width: $sm){
+					height: auto;
+				}
+			}			
+		}
+		.description-final{
+			// display: table;
+			display: none;
+			background-color: #4d4d4f;
+			height: 180px;
+			margin: 8px auto;
+			.description-inner{
+				height: 180px;
+				vertical-align: middle;
+				display: table-cell;
+				.contents{
+					margin: 0 auto;	
+					.left{
+						float: left;
+						width: calc(33% - 20px);
+						vertical-align: middle;
+						margin: 24px 10px 0 30px;
+						@media only screen and (max-width: $lg){
+							width: calc(40% - 40px);
+						}
+						@media only screen and (max-width: $md){
+							float: none;
+							width: calc(100% - 40px);
+							margin: 25px auto;
+						}
+						h4{
+							@include hel-bold(38px, 40px);
+							color: $white;
+							text-align: left;
+							@media only screen and (max-width: $lg){
+								font-size: 28px;
+								line-height: 34px;
+							}
+							@media only screen and (max-width: $md){
+								font-size: 28px;
+								line-height: 33px;
+								margin-bottom: 8px;
+							}
+						}
+						p{
+							@include hel-light(20px);
+							color: $white;
+							text-align: left;
+							@media only screen and (max-width: $lg){
+								font-size: 15px;
+								line-height: 22px;
+							}
+							@media only screen and (max-width: $md){
+								font-size: 18px;
+								line-height: 22px;
+								margin-top: 0;
+							}
+						}
+					}
+					.right{
+						float: left;
+						width: calc(66% - 18px);
+						vertical-align: middle;
+						@media only screen and (max-width: $lg){
+							width: calc(60% - 20px);
+						}
+						@media only screen and (max-width: $md){
+							float: none;
+							width: calc(100% - 40px);
+							margin: 0 auto 28px;
+						}
+						p{
+							@include hel-roman(20px, 28px);
+							color: $white;
+							text-align: left;
+							@media only screen and (max-width: $lg){
+								font-size: 18px;
+								line-height: 26px;
+							}
+							@media only screen and (max-width: $md){
+								font-size: 16px;
+								line-height: 22px;
+							}
+							span{
+								@include hel-bold(20px);
+								@media only screen and (max-width: $md){
+									font-size: 16px;
+									line-height: 22px;
+								}
+								a{
+									color: #9fd9b4;
+									cursor: pointer;
+									&:hover{
+										text-decoration: none;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.button{
+			display: block;
+			background-color: $green;
+			height: 38px;
+			width: 160px;
+			margin: 0 auto;
+			@include hel-bold('18px', 38px);
+			color: $white;
+			vertical-align: middle;
+			text-align: center;
+			border-radius: 20px;
+			cursor: pointer;
+			opacity: 0.3;
+			cursor: arrow !important;
+			&.validated{
+				opacity: 1;
+			}
+		}
+		.flip-parent {
+			cursor: pointer;
+
+			perspective: 1000px;
+			-webkit-perspective: 1000px;
+			-moz-perspective: 1000px;
+			-o-perspective: 1000px;
+			-ms-perspective: 1000px;
+			
+			transform-style: preserve-3d;
+			-webkit-transform-style: preserve-3d;
+			-moz-transform-style: preserve-3d;
+			-o-transform-style: preserve-3d;
+			-ms-transform-style: preserve-3d;
+			.back {
+				transform: rotateY(0deg);
+				-webkit-transform: rotateY(0deg);
+				-moz-transform: rotateY(0deg);
+				-o-transform: rotateY(0deg);
+				-ms-transform: rotateY(0deg);
+			}
+			&.hover .flip{
+			    transform: rotateY(180deg);
+				-webkit-transform: rotateY(180deg);
+				-moz-transform: rotateY(180deg);
+				-o-transform: rotateY(180deg);
+				-ms-transform: rotateY(180deg);
+			}
+			.flip {
+				position: relative;
+				width: 376px;
+				height: 380px;
+
+				transition: 0.6s;
+				-webkit-transition: 0.6s;
+				-moz-transition: 0.6s;
+				-o-transition: 0.6s;
+				-ms-transition: 0.6s;
+				
+				transform-style: preserve-3d;
+				-webkit-transform-style: preserve-3d;
+				-moz-transform-style: preserve-3d;
+				-o-transform-style: preserve-3d;
+				-ms-transform-style: preserve-3d;
+				
+				backface-visibility: visible;
+				-webkit-backface-visibility: visible;
+				-moz-backface-visibility: visible;
+				-o-backface-visibility: visible;
+				-ms-backface-visibility: visible;
+				@media only screen and (max-width: $lg){
+					width: 364px;
+				}
+				@media only screen and (max-width: $md){
+					width: 380px;
+				}
+				@media only screen and (max-width: $sm){
+					height: 300px;
+					width: 100%;
+				}
+				.front,
+				.back {
+					// width: 100%;
+					width: 376px;
+					height: 380px;
+					max-height: 380px;
+					position: absolute;
+					top: 0;
+					left: 0;
+
+					backface-visibility: hidden;
+					-webkit-backface-visibility: hidden;
+					-moz-backface-visibility: hidden;
+					-o-backface-visibility: hidden;
+					-ms-backface-visibility: visible;
+					
+					transition: 0.6s;
+					-webkit-transition: 0.6s;
+					-moz-transition: 0.6s;
+					-o-transition: 0.6s;
+					-ms-transition: 0.6s;
+					
+					transform-style: preserve-3d;
+					-webkit-transform-style: preserve-3d;
+					-moz-transform-style: preserve-3d;
+					-o-transform-style: preserve-3d;
+					-ms-transform-style: preserve-3d;
+					@media only screen and (max-width: $sm){
+						height: 300px;
+						width: 100%;
+					}
+				}
+				.front {
+					transform: rotateY(0deg);
+					-webkit-transform: rotateY(0deg);
+					-moz-transform: rotateY(0deg);
+					-o-transform: rotateY(0deg);
+					-ms-transform: rotateY(0deg);
+				}
+				.back {
+					transform: rotateY(-180deg);
+					-webkit-transform: rotateY(-180deg);
+					-moz-transform: rotateY(-180deg);
+					-o-transform: rotateY(-180deg);
+					-ms-transform: rotateY(-180deg);
+				}
+
+				
+				
+			}			
+		}
+		.question-one{
+			.teal{
+				&.front{
+					@include sprite($tile-one);
+					background-color: #00a1b0;
+					width: 100%;
+					@media only screen and (max-width: $sm){
+						background: #00a1b0 url(../img/tile-one-mob@2x.png) no-repeat bottom right;
+						background-size: 100%;
+						height: 300px;
+					}
+				}
+			}
+			.orange{
+				&.front{
+					@include sprite($tile-two);
+					background-color: #ff9016;
+					width: 100%;
+					@media only screen and (max-width: $sm){
+						background: #ff9016 url(../img/tile-two-mob@2x.png) no-repeat bottom right;
+						background-size: 100%;
+						height: 300px;
+					}
+				}
+			}
+			.green{
+				&.front{
+					@include sprite($tile-three);
+					background-color: #9fd9b4;
+					width: 100%;
+					@media only screen and (max-width: $sm){
+						background: #9fd9b4 url(../img/tile-three-mob@2x.png) no-repeat bottom right;
+						background-size: 100%;
+						height: 300px;
+					}
+				}
+			}
+			.yellow{
+				&.front{
+					@include sprite($tile-four);
+					background-color: #f4be49;
+					width: 100%;
+					@media only screen and (max-width: $sm){
+						background: #f4be49 url(../img/tile-four-mob@2x.png) no-repeat bottom right;
+						background-size: 100%;
+						height: 300px;
+					}
+				}
+			}
+			.front{
+				.bar{
+					background-color: $black;
+					width: 100%;
+					height: 45px;
+				}
+				p{
+					width: 300px;
+					margin: 0 0 0 35px;
+					padding: 0;
+					text-align: left;
+					@include hel-roman(28px, 31px);
+					@media only screen and (max-width: $sm){
+						width: auto;
+						font-size: 22px;
+					}
+					&:first-child{
+						margin-top: 40px;
+					}
+					b{
+						@include hel-bold(34px, 37px);
+						@media only screen and (max-width: $sm){
+							font-size: 27px;
+							line-height: 27px;		
+							width: 80%;	
+						}
+					}
+				}
+			}
+			.back{
+				.bar{
+					background-color: $black;
+					width: 100%;
+					height: 45px;
+					@media only screen and (max-width: $sm){
+						height: 35px;
+					}
+				}
+				p{
+					&.title{
+						@include hel-bold(26px, 45px);
+						vertical-align: middle;
+						color: $white;
+						margin: 0 0 0 12px;
+						padding: 0; 
+						text-align: left;
+						@media only screen and (max-width: $sm){
+							font-size: 21px;
+							line-height: 35px;
+						}
+					}
+					&.disclaimer{
+						color: black;
+						display: none;
+						@include hel-light(18px, 22px);
+						text-align: center;
+						margin: 0;
+						padding: 0 20px;
+						width: auto;
+						@media only screen and (max-width: $sm){
+							font-size: 16px;
+						}
+						a{
+							color: $white;
+							text-decoration: none;
+							span{
+								text-decoration: underline;
+							}
+							&:hover{
+								color: $white;
+								text-decoration: none;
+								span{
+									text-decoration: underline;
+								}
+							}
+						}
+						&.two{
+							margin: 90px 0 0 0;
+						}
+						&.three{
+							margin: 30px 0 0 0;
+						}
+					}
+				}
+				ul{
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					li{
+						@include hel-light(22px, 40px);
+						vertical-align: middle;
+						text-align: left;
+						padding-left: 34px;
+						@media only screen and (max-width: $sm){
+							font-size: 17px;
+							line-height: 32px;
+						}
+						&:hover{
+							background-color: rgba(0,0,0,0.2);
+						}
+						&.active{
+							background-color: rgba(0,0,0,0.2);
+							@include hel-bold(22px, 40px);
+							color: $white;
+							@media only screen and (max-width: $sm){
+								font-size: 17px;
+								line-height: 32px;
+							}
+						}
+						input{
+							display: none;
+							background-color: #ccecef;
+							@include hel-light(20px);
+							color: black;
+							border: 0;
+							outline: none;
+							height: 34px;
+							width: 214px;
+							margin: 3px 30px 0 0;
+							padding: 0 10px;
+							float: right;
+							@media only screen and (max-width: $sm){
+								font-size: 17px;
+								width: 150px;
+								height: 26px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.question-two{
+			.bar{
+				background-color: $black;
+				width: 100%;
+				height: 45px;
+				@media only screen and (max-width: $sm){
+					height: 35px;
+				}
+				.title{
+					float: left;
+					width: calc(100% - 56px);
+					@include hel-bold(26px, 45px);
+					vertical-align: middle;
+					color: $white;
+					margin: 0 0 0 12px;
+					padding: 0; 
+					text-align: left;
+					@media only screen and (max-width: $sm){
+						font-size: 20px;
+						line-height: 35px;
+					}
+				}
+				.icon-info,
+				.icon-close{
+					float: left;
+					margin: 6px 0 0 0;
+					width: 34px;
+					height: 34px;
+					img{
+						width: 100%;
+						@media only screen and (max-width: $sm){
+							height: 72%;
+							width: 72%;
+						}
+					}
+				}
+			}
+			ul{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				li{
+					@include hel-light(22px, 40px);
+					vertical-align: middle;
+					text-align: left;
+					padding-left: 34px;
+					@media only screen and (max-width: $sm){
+						font-size: 17px;
+						line-height: 32px;
+					}
+					&:hover{
+						background-color: rgba(0,0,0,0.2);
+					}
+					&.active{
+						background-color: rgba(0,0,0,0.2);
+						@include hel-bold(22px, 40px);
+						color: $white;
+						@media only screen and (max-width: $sm){
+							font-size: 17px;
+							line-height: 32px;
+						}
+					}
+					input{
+						background-color: #ccecef;
+						@include hel-light(20px);
+						color: black;
+						border: 0;
+						outline: none;
+						height: 34px;
+						width: 214px;
+						margin: 3px 30px 0 0;
+						padding: 0 10px;
+						float: right;
+					}
+				}
+			}
+			p{
+				margin: 0;
+				padding: 20px 27px;
+				text-align: left;
+				color: #000;
+				@include hel-light(26px, 35px);
+				@media only screen and (max-width: $sm){
+					font-size: 19px;
+					line-height: 23px;
+				}
+				strong{
+					@include hel-bold(26px, 35px);
+					@media only screen and (max-width: $sm){
+						font-size: 19px;
+						line-height: 23px;	
+					}
+				}
+				&.disclaimer{
+					display: none;
+					@include hel-light(18px, 22px);
+					text-align: center;
+					width: auto;
+					padding: 0 20px;
+					@media only screen and (max-width: $md){
+						font-size: 17px;
+					}
+					@media only screen and (max-width: $sm){
+						font-size: 16px;
+						line-height: 20px;	
+					}
+					a{
+						color: $white;
+						text-decoration: none;
+						span{
+							text-decoration: underline;
+						}
+						&:hover{
+							color: $white;
+							text-decoration: none;
+							span{
+								text-decoration: underline;
+							}
+						}
+					}
+					&.five{
+						margin: 70px 0 0 0;
+						@media only screen and (max-width: $sm){
+							margin: 25px 0 0 0;
+						}
+					}
+				}
+			}
+		}
+		.key{
+			background-color: white;
+			border: 2px solid $grey;
+			height: 376px;
+			width: calc(33% - 24px);
+			@media only screen and (max-width: $lg){
+				width: calc(100% - 24px);
+				height: 180px;
+			}
+			@media only screen and (max-width: $md){
+				height: 376px;
+				width: calc(100% - 24px);
+			}
+			@media only screen and (max-width: $sm){
+				height: 300px;
+			}
+			.inner{
+				display: table;
+				width: calc(100% - 80px);
+				margin: 30px 0 0 35px;
+				@media only screen and (max-width: $lg){
+					margin: 20px 0 0 35px;
+				}
+				@media only screen and (max-width: $sm){
+					width: 100%;
+					margin: 30px 0 0 20px;
+				}
+				h3{
+					margin: 0;
+					@include hel-bold(52px, 50px);
+					color: $grey;
+					text-align: left;
+					&.stage-2{
+						display: none;
+					}
+					@media only screen and (max-width: $lg){
+						float: left;
+						span{
+							display: block;
+						}
+					}
+					@media only screen and (max-width: $sm){
+						font-size: 41px;
+						line-height: 41px;
+					}
+				}
+				p{
+					@include hel-bold(18px);
+					color: $grey;
+					text-align: left;
+					@media only screen and (max-width: $lg){
+						float: left;
+						clear: both;
+					}
+					@media only screen and (max-width: $sm){
+						font-size: 14px;
+					}
+				}
+				.text{
+					position: relative;
+					@media only screen and (max-width: $lg){
+						position: absolute;
+						top: 5px;
+						right: 50px;
+					}
+					@media only screen and (max-width: $md){
+						position: absolute;
+						top: 180px;
+						left: 100px;
+						margin: 0 auto;
+					}
+					@media only screen and (max-width: $sm){
+						top: 145px;
+						left: 4%;
+						width: 100%;
+					}
+					p{
+						position: absolute;
+						top: -8px;
+						left: 0;
+						width: auto;
+						@include hel-bold(24px);
+						color: $grey;
+						text-align: left;
+						@media only screen and (max-width: $lg){
+							left: -60px;
+						}
+						@media only screen and (max-width: $sm){
+							left: 9px;
+							top: -3px;
+							font-size: 19px;
+						}
+					}
+					ul{
+						float: right;
+						width: 260px;
+						list-style-type: none;
+						margin: 0 -45px 0 0;
+						padding: 0;
+						@media only screen and (max-width: $sm){
+							width: 250px;
+							margin: 0 auto;
+						}
+						li{
+							display: inline-block;
+						    background-color: transparent;
+							float: left;
+							width: 50%;
+							margin: 16px 0;
+							padding: 0;
+							@include hel-light(18px);
+							color: $grey;
+							text-align: center;
+							@media only screen and (max-width: $sm){
+								width: 50%;
+								font-size: 16px;
+							}
+							&.grey{
+								@media only screen and (max-width: $sm){
+									// display: none;
+								}
+								span{
+									background-color: #d1d3d4;
+								}
+							}
+							&.red{
+								span{
+									background-color: #d64123;
+								}
+							}
+							&.yellow{
+								span{
+									background-color: #f4be49;
+								}
+							}
+							&.green{
+								span{
+									background-color: #00814f;
+								}
+							}
+							span{
+								display: block;
+								height: 32px;
+								width: 32px;
+								margin: 0 auto 8px;
+								border-radius: 50%;
+								@media only screen and (max-width: $sm){
+									height: 26px;
+									width: 26px;
+								}
+							}
+						}
+					}
+				}			
+			}
+		}
+		.results{
+			position: relative;
+			.inner{
+				display: table;
+				height: 380px;
+				width: 100%;
+				@media only screen and (max-width: $sm){
+					height: 285px;
+				}
+				.single-result{
+					position: absolute;
+					background-color: #d1d3d4;
+					height: 180px;
+					width: calc(50% - 10px);
+					margin: 0;
+					cursor: pointer;
+					@media only screen and (max-width: $sm){
+						height: 140px;
+					}
+					&.top-left{
+						top: 0;
+						left: 0;
+					}
+					&.top-right{
+						top: 0;
+						right: 0;
+					}
+					&.bottom-left{
+						bottom: 0;
+						left: 0;
+					}
+					&.bottom-right{
+						bottom: 0;
+						right: 0;
+					}
+					&[data-color=G]{
+						background-color: #00814f;
+					}
+					&[data-color=Y]{
+						background-color: #f4be49;
+					}
+					&[data-color=R]{
+						background-color: #d64123;
+					}
+					&[data-color=G],
+					&[data-color=Y],
+					&[data-color=R]{
+						.single-result-inner{
+							p{
+								color: $white;
+							}
+						}
+					}
+					.single-result-inner{
+						position: relative;
+						height: 180px;
+						width: 100%;
+						display: table;
+						@media only screen and (max-width: $sm){
+							height: 140px;
+						}
+						p{
+							display: table-cell;
+							vertical-align: middle;
+							@include hel-bold(24px, 26px);
+							color: $grey;
+							@media only screen and (max-width: $sm){
+								font-size: 19px;
+								line-height: 20px;
+							}
+							span{
+								display: block;
+								@include hel-roman(24px, 26px);
+								margin: 10px 0 0 0;
+								@media only screen and (max-width: $sm){
+									font-size: 19px;
+									line-height: 20px;
+								}
+							}
+							&.more{
+								position: absolute;
+								right: 6px;
+								bottom: -15px;
+								font-size: 12px;
+								@media only screen and (max-width: $sm){
+									font-size: 10px;
+									right: 5px;
+									bottom: -12px;
+								}
+							}
+						}
+					}
+				}
+			}
+			.info{
+				position: absolute;
+				height: 0;
+				width: 0;
+				overflow: hidden;
+				.bar{
+					background-color: $black;
+					width: 100%;
+					height: auto;
+					p{
+						@include hel-bold(26px, 28px);
+						color: $white;
+						margin: 0 0 0 12px;
+						padding: 10px 0;
+						text-align: left;
+						@media only screen and (max-width: $sm){
+							font-size: 18px;
+							line-height: 20px;
+						}
+						span{
+							display: block;
+							@include hel-light(26px, 28px);
+							@media only screen and (max-width: $sm){
+								font-size: 18px;
+								line-height: 20px;
+							}
+						}
+					}
+					.close{
+						display: block;
+						position: absolute;
+						background-color: black;
+						top: 5px;
+						right: 8px;
+						height: 26px;
+						width: 26px;
+						@include hel-bold(22px, 22px);
+						vertical-align: middle;
+						color: $white;
+						border-radius: 50%;
+						border: 3px solid white;
+						text-align: center;
+						cursor: pointer;
+					}
+				}
+				.content{
+					@include hel-light(28px, 30px);
+					text-align: left;
+					margin: 30px 75px 0 35px;
+					@media only screen and (max-width: $sm){
+						font-size: 22px;
+						line-height: 24px;
+						margin: 30px 40px 0 35px;
+					}
+				}
+			}
+		}
+		&.stage-1{
+			.results{
+				.inner{
+					.single-result{
+						&[data-color=R],
+						&[data-color=G]{
+							background-color: #d1d3d4;
+							.single-result-inner{
+								p{
+									color: $grey;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		&.stage-2{
+			.info{
+				.content{
+					margin: 10px 25px 0 35px;
+					ul{
+						margin: 0 0 0 12px;
+						padding: 10px 0;
+						li{
+							@include hel-light(22px, 24px);
+							margin: 8px 0;
+						}
+					}
+				}
+			}
+		}
+		.form{
+			@media only screen and (max-width: $sm){
+				padding: 0 0 70px 0;
+			}
+			.inner{
+				display: table;
+				width: 100%;
+				form{
+					width: 300px;
+					margin: 25px auto 0;
+					label{
+						display: block;
+						text-align: left;
+						@include hel-bold('14px');
+						color: $black;
+						margin: 0 0 7px 20px;
+					}
+					input{
+						background-color: #ddf2e5;
+						border-radius: 18px;
+						height: 33px;
+						@include hel-roman(16px, 33px);
+						color: $grey;
+						vertical-align: middle;
+						width: 280px;
+						margin: 0 0 20px 0;
+						padding: 0 10px;
+						outline: none;
+						border: none;
+						@media only screen and (max-width: $sm){
+							width: 250px;
+						}
+					}	
+					#continue{
+						display: block;
+						background-color: $green;
+						height: 38px;
+						width: 160px;
+						margin: 0 auto;
+						@include hel-bold(18px, 38px);
+						color: $white;
+						vertical-align: middle;
+						text-align: center;
+						border-radius: 20px;
+						cursor: pointer;
+					}
+				}		
+			}
+		}
+	}
+}
+
+/* IE */
+#tool section .front, 
+#tool section .flip-parent.hover .flip .back {
+	/* IE Hack. Halfway through the card flip, set visibility. Keep other browsers visible throughout the card flip. */
+	animation: stayvisible 0.3s both;
+	-webkit-animation: stayvisible 0.3s both;
+	-moz-animation: stayvisible 0.3s both;
+	-o-animation: stayvisible 0.3s both;
+	-ms-animation: donothing 0.3s;
+	-ms-transition: visibility 0s linear 0.17s;
+	visibility: visible;
+}
+#tool section .back, 
+#tool section .flip-parent.hover .flip .front {
+	/* IE Hack. Halfway through the card flip, set visibility. Keep other browsers visible throughout the card flip. */
+	animation: stayvisible 0.3s both;
+	-webkit-animation: stayvisible 0.3s both;
+	-moz-animation: stayvisible 0.3s both;
+	-o-animation: stayvisible 0.3s both;
+	-ms-animation: donothing 0.3s;
+	-ms-transition: visibility 0s linear 0.17s;
+	visibility: hidden;
+}
+@keyframes stayvisible { from { visibility: visible; } to { visibility: visible; } }
+@-webkit-keyframes stayvisible { from { visibility: visible; } to { visibility: visible; } }
+@-moz-keyframes stayvisible { from { visibility: visible; } to { visibility: visible; } }
+@-o-keyframes stayvisible { from { visibility: visible; } to { visibility: visible; } }
+@-ms-keyframes donothing { 0% { } 100% { } }

@@ -1,0 +1,100 @@
+// scale %
+$scale: .6429;
+
+//colors
+$white: #fff;
+$black: #000;
+$grey: #4e4e50;
+$orange: #f5bd47;
+$orange-light: #fdf2da;
+$orange-dark: #f38e27;
+$green: #4a8245;
+$green-light: #a6d8c0;
+$green-dark: #018053;
+
+// infographic breakpoints
+$sm: 420px;
+$md: 768px;
+$lg: 1200px;
+
+// base font size
+@function em($target, $context: 12) {
+  @return ($target / $context) * 1em;
+}
+
+// border radius
+@mixin border-radius($radius) {
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin border-top-left-radius($radius) {
+	-moz-border-radius-topleft: $radius;
+	-webkit-border-top-left-radius: $radius;
+	border-top-left-radius: $radius;
+}
+@mixin border-bottom-left-radius($radius) {
+	-moz-border-radius-bottomleft: $radius;
+	-webkit-border-bottom-left-radius: $radius;
+	border-bottom-left-radius: $radius;
+}
+
+
+// retina ready bg image
+@mixin background-image-retina($file, $type, $width, $height) {
+  background-image: url($file + '.' + $type);
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (-moz-min-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx){
+    & {
+      background-image: url($file + '@2x.' + $type);
+      -webkit-background-size: $width $height;
+      -moz-background-size: $width $height;
+      -o-background-size: $width $height;
+      background-size: $width $height;
+    }
+  }
+}
+
+
+// font weights
+@mixin hel-light($font-size: em(11), $line-height: em(11)) {
+  font: normal normal 100 #{$font-size}/#{$line-height} 'HelveticaNeueW01-45Ligh', Helvetica, Arial, sans-serif;
+}
+
+@mixin hel-roman($font-size: em(11), $line-height: em(11)) {
+  font: normal normal 300 #{$font-size}/#{$line-height} 'HelveticaNeueW01-55Roma', Helvetica, Arial, sans-serif;
+}
+
+@mixin hel-medium($font-size: em(11), $line-height: em(11)) {
+  font: normal normal 300 #{$font-size}/#{$line-height} 'HelveticaNeueW01-65Medi', Helvetica, Arial, sans-serif;
+}
+
+@mixin hel-bold($font-size: em(11), $line-height: em(11)) {
+  font: normal normal 300 #{$font-size}/#{$line-height} 'HelveticaNeueW01-75Bold', Helvetica, Arial, sans-serif;
+}
+
+
+// rem/px
+@mixin font-size($size, $is-important: false) {
+	$size: if(unitless($size), $size, $size / 1px);
+
+	@if $is-important {
+		font-size: $size + px !important;
+		font-size: ($size / strip-units(14)) + rem !important;
+	} @else {
+		font-size: $size + px;
+		font-size: ($size / strip-units(14)) + rem;
+	}
+}
+
+// Strip out units to do math functions.
+@function strip-units($number) {
+	@return $number / ($number * 0 + 1);
+}

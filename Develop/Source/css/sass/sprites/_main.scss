@@ -1,0 +1,271 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$patheon-logo-mob-name: 'patheon-logo-mob';
+$patheon-logo-mob-x: 760px;
+$patheon-logo-mob-y: 53px;
+$patheon-logo-mob-offset-x: -760px;
+$patheon-logo-mob-offset-y: -53px;
+$patheon-logo-mob-width: 242px;
+$patheon-logo-mob-height: 34px;
+$patheon-logo-mob-total-width: 1138px;
+$patheon-logo-mob-total-height: 760px;
+$patheon-logo-mob-image: '../img/spritesheets/main.png';
+$patheon-logo-mob: (760px, 53px, -760px, -53px, 242px, 34px, 1138px, 760px, '../img/spritesheets/main.png', 'patheon-logo-mob', );
+$patheon-logo-name: 'patheon-logo';
+$patheon-logo-x: 760px;
+$patheon-logo-y: 0px;
+$patheon-logo-offset-x: -760px;
+$patheon-logo-offset-y: 0px;
+$patheon-logo-width: 378px;
+$patheon-logo-height: 53px;
+$patheon-logo-total-width: 1138px;
+$patheon-logo-total-height: 760px;
+$patheon-logo-image: '../img/spritesheets/main.png';
+$patheon-logo: (760px, 0px, -760px, 0px, 378px, 53px, 1138px, 760px, '../img/spritesheets/main.png', 'patheon-logo', );
+$tile-four-name: 'tile-four';
+$tile-four-x: 0px;
+$tile-four-y: 0px;
+$tile-four-offset-x: 0px;
+$tile-four-offset-y: 0px;
+$tile-four-width: 380px;
+$tile-four-height: 380px;
+$tile-four-total-width: 1138px;
+$tile-four-total-height: 760px;
+$tile-four-image: '../img/spritesheets/main.png';
+$tile-four: (0px, 0px, 0px, 0px, 380px, 380px, 1138px, 760px, '../img/spritesheets/main.png', 'tile-four', );
+$tile-one-name: 'tile-one';
+$tile-one-x: 380px;
+$tile-one-y: 0px;
+$tile-one-offset-x: -380px;
+$tile-one-offset-y: 0px;
+$tile-one-width: 380px;
+$tile-one-height: 380px;
+$tile-one-total-width: 1138px;
+$tile-one-total-height: 760px;
+$tile-one-image: '../img/spritesheets/main.png';
+$tile-one: (380px, 0px, -380px, 0px, 380px, 380px, 1138px, 760px, '../img/spritesheets/main.png', 'tile-one', );
+$tile-three-name: 'tile-three';
+$tile-three-x: 0px;
+$tile-three-y: 380px;
+$tile-three-offset-x: 0px;
+$tile-three-offset-y: -380px;
+$tile-three-width: 380px;
+$tile-three-height: 380px;
+$tile-three-total-width: 1138px;
+$tile-three-total-height: 760px;
+$tile-three-image: '../img/spritesheets/main.png';
+$tile-three: (0px, 380px, 0px, -380px, 380px, 380px, 1138px, 760px, '../img/spritesheets/main.png', 'tile-three', );
+$tile-two-name: 'tile-two';
+$tile-two-x: 380px;
+$tile-two-y: 380px;
+$tile-two-offset-x: -380px;
+$tile-two-offset-y: -380px;
+$tile-two-width: 380px;
+$tile-two-height: 380px;
+$tile-two-total-width: 1138px;
+$tile-two-total-height: 760px;
+$tile-two-image: '../img/spritesheets/main.png';
+$tile-two: (380px, 380px, -380px, -380px, 380px, 380px, 1138px, 760px, '../img/spritesheets/main.png', 'tile-two', );
+$patheon-logo-mob-2x-name: 'patheon-logo-mob@2x';
+$patheon-logo-mob-2x-x: 1520px;
+$patheon-logo-mob-2x-y: 105px;
+$patheon-logo-mob-2x-offset-x: -1520px;
+$patheon-logo-mob-2x-offset-y: -105px;
+$patheon-logo-mob-2x-width: 484px;
+$patheon-logo-mob-2x-height: 67px;
+$patheon-logo-mob-2x-total-width: 2276px;
+$patheon-logo-mob-2x-total-height: 1520px;
+$patheon-logo-mob-2x-image: '/img/spritesheets/main@2x.png';
+$patheon-logo-mob-2x: (1520px, 105px, -1520px, -105px, 484px, 67px, 2276px, 1520px, '/img/spritesheets/main@2x.png', 'patheon-logo-mob@2x', );
+$patheon-logo-2x-name: 'patheon-logo@2x';
+$patheon-logo-2x-x: 1520px;
+$patheon-logo-2x-y: 0px;
+$patheon-logo-2x-offset-x: -1520px;
+$patheon-logo-2x-offset-y: 0px;
+$patheon-logo-2x-width: 756px;
+$patheon-logo-2x-height: 105px;
+$patheon-logo-2x-total-width: 2276px;
+$patheon-logo-2x-total-height: 1520px;
+$patheon-logo-2x-image: '/img/spritesheets/main@2x.png';
+$patheon-logo-2x: (1520px, 0px, -1520px, 0px, 756px, 105px, 2276px, 1520px, '/img/spritesheets/main@2x.png', 'patheon-logo@2x', );
+$tile-four-2x-name: 'tile-four@2x';
+$tile-four-2x-x: 0px;
+$tile-four-2x-y: 0px;
+$tile-four-2x-offset-x: 0px;
+$tile-four-2x-offset-y: 0px;
+$tile-four-2x-width: 760px;
+$tile-four-2x-height: 760px;
+$tile-four-2x-total-width: 2276px;
+$tile-four-2x-total-height: 1520px;
+$tile-four-2x-image: '/img/spritesheets/main@2x.png';
+$tile-four-2x: (0px, 0px, 0px, 0px, 760px, 760px, 2276px, 1520px, '/img/spritesheets/main@2x.png', 'tile-four@2x', );
+$tile-one-2x-name: 'tile-one@2x';
+$tile-one-2x-x: 760px;
+$tile-one-2x-y: 0px;
+$tile-one-2x-offset-x: -760px;
+$tile-one-2x-offset-y: 0px;
+$tile-one-2x-width: 760px;
+$tile-one-2x-height: 760px;
+$tile-one-2x-total-width: 2276px;
+$tile-one-2x-total-height: 1520px;
+$tile-one-2x-image: '/img/spritesheets/main@2x.png';
+$tile-one-2x: (760px, 0px, -760px, 0px, 760px, 760px, 2276px, 1520px, '/img/spritesheets/main@2x.png', 'tile-one@2x', );
+$tile-three-2x-name: 'tile-three@2x';
+$tile-three-2x-x: 0px;
+$tile-three-2x-y: 760px;
+$tile-three-2x-offset-x: 0px;
+$tile-three-2x-offset-y: -760px;
+$tile-three-2x-width: 760px;
+$tile-three-2x-height: 760px;
+$tile-three-2x-total-width: 2276px;
+$tile-three-2x-total-height: 1520px;
+$tile-three-2x-image: '/img/spritesheets/main@2x.png';
+$tile-three-2x: (0px, 760px, 0px, -760px, 760px, 760px, 2276px, 1520px, '/img/spritesheets/main@2x.png', 'tile-three@2x', );
+$tile-two-2x-name: 'tile-two@2x';
+$tile-two-2x-x: 760px;
+$tile-two-2x-y: 760px;
+$tile-two-2x-offset-x: -760px;
+$tile-two-2x-offset-y: -760px;
+$tile-two-2x-width: 760px;
+$tile-two-2x-height: 760px;
+$tile-two-2x-total-width: 2276px;
+$tile-two-2x-total-height: 1520px;
+$tile-two-2x-image: '/img/spritesheets/main@2x.png';
+$tile-two-2x: (760px, 760px, -760px, -760px, 760px, 760px, 2276px, 1520px, '/img/spritesheets/main@2x.png', 'tile-two@2x', );
+$spritesheet-width: 1138px;
+$spritesheet-height: 760px;
+$spritesheet-image: '../img/spritesheets/main.png';
+$spritesheet-sprites: ($patheon-logo-mob, $patheon-logo, $tile-four, $tile-one, $tile-three, $tile-two, );
+$spritesheet: (1138px, 760px, '../img/spritesheets/main.png', $spritesheet-sprites, );
+$retina-spritesheet-width: 2276px;
+$retina-spritesheet-height: 1520px;
+$retina-spritesheet-image: '/img/spritesheets/main@2x.png';
+$retina-spritesheet-sprites: ($patheon-logo-mob-2x, $patheon-logo-2x, $tile-four-2x, $tile-one-2x, $tile-three-2x, $tile-two-2x, );
+$retina-spritesheet: (2276px, 1520px, '/img/spritesheets/main@2x.png', $retina-spritesheet-sprites, );
+
+/*
+These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+
+The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+*/
+$patheon-logo-mob-group-name: 'patheon-logo-mob';
+$patheon-logo-mob-group: ('patheon-logo-mob', $patheon-logo-mob, $patheon-logo-mob-2x, );
+$patheon-logo-group-name: 'patheon-logo';
+$patheon-logo-group: ('patheon-logo', $patheon-logo, $patheon-logo-2x, );
+$tile-four-group-name: 'tile-four';
+$tile-four-group: ('tile-four', $tile-four, $tile-four-2x, );
+$tile-one-group-name: 'tile-one';
+$tile-one-group: ('tile-one', $tile-one, $tile-one-2x, );
+$tile-three-group-name: 'tile-three';
+$tile-three-group: ('tile-three', $tile-three, $tile-three-2x, );
+$tile-two-group-name: 'tile-two';
+$tile-two-group: ('tile-two', $tile-two, $tile-two-2x, );
+$retina-groups: ($patheon-logo-mob-group, $patheon-logo-group, $tile-four-group, $tile-one-group, $tile-three-group, $tile-two-group, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+  It should be used with a "retina group" variable.
+
+The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+
+$icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+
+.icon-home {
+  @include retina-sprite($icon-home-group);
+}
+*/
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+/*
+The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+  This yields the same output as CSS retina template but can be overridden in SCSS
+
+@include retina-sprites($retina-groups);
+*/
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}

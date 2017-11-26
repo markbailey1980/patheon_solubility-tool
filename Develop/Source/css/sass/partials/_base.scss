@@ -1,0 +1,45 @@
+body{
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	.container{
+		width: 100%;
+		section{
+			max-width: $lg;
+			margin: 0 auto;
+		}
+	}
+	.mobile{
+		display: none;
+		@media only screen and (max-width: $sm){
+			display: block;
+		}
+	}
+	section{
+		width: $lg;
+		margin: 30px auto;
+		@media only screen and (max-width: $lg){
+			width: $md;
+		}
+		@media only screen and (max-width: $md){
+			max-width: 400px;
+			width: 100%;
+		}
+		.disclaimer{
+			@include hel-medium(12px, 14px);
+			width: calc(100% - 30px);
+			margin: 0 15px;
+			text-align: left;
+			color: $grey;
+			@media only screen and (max-width: $lg){
+				width: calc(100% - 20px);
+				margin: 0 10px;
+			}
+			@media only screen and (max-width: $md){
+				font-size: 11px;
+				line-height: 13px;
+				width: calc(100% - 20px);
+				margin: 0 10px;
+			}
+		}
+	}
+}
